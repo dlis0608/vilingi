@@ -1,0 +1,162 @@
+.topoffer {
+  margin-bottom: 50px;
+  padding-top: 65px;
+  padding-bottom: 155px;
+
+  background: url(../img/topoffer-bg.jpg) top center no-repeat;
+  &__wrap {
+    padding-left: 240px;
+  }
+  &__subtext {
+    width: 620px;
+    margin: auto;
+    margin-bottom: 70px;
+    padding-top: 15px;
+
+    font-size: 22px;
+    text-align: center;
+    color: #000000;
+
+    span {
+      display: block;
+      margin-bottom: 10px;
+
+      font-weight: 700;
+      font-size: 28px;
+      color: #7b3929;
+    }
+  }
+  &__advantages {
+    width: 600px;
+    margin: auto;
+  }
+}
+.topoffer-advantages {
+  &__title {
+    margin-bottom: 35px;
+
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+
+    width: 50%;
+    margin-bottom: 30px;
+    padding-left: 35px;
+
+    font-size: 16px;
+    color: #000000;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 20px;
+      height: 37px;
+
+      background-color: #735948;
+
+      mask-image: url("../img/topor.svg");
+    }
+  }
+}
+@media screen and (max-width: 1169px) {
+  .topoffer {
+    margin-bottom: 15px;
+    padding-top: 25px;
+    padding-bottom: 70px;
+
+    background: url(../img/topoffer-bg960.jpg) top center no-repeat;
+    &__wrap {
+      max-width: 970px;
+      padding-left: 15px;
+    }
+    &__subtext {
+      margin-right: 20px;
+    }
+    &__advantages {
+      margin-right: 20px;
+    }
+  }
+}
+@media screen and (max-width: 969px) {
+  .topoffer {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 0;
+
+    background: url(../img/topoffer-bg750.jpg) top center no-repeat;
+    &__wrap {
+      max-width: 750px;
+      padding-left: 15px;
+      h1 {
+        width: 460px;
+        margin-bottom: 15px;
+        margin-left: auto;
+
+        text-align: left;
+      }
+    }
+    &__subtext {
+      width: 460px;
+      margin-right: 0;
+      margin-bottom: 100px;
+      padding-top: 10px;
+      padding-right: 90px;
+
+      font-size: 21px;
+      line-height: 1.2;
+      text-align: left;
+    }
+    &__advantages {
+      margin-right: auto;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .topoffer {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 0;
+
+    background: url(../img/topoffer-bg480.jpg) top center no-repeat;
+    &__wrap {
+      max-width: 100%;
+      padding-left: 15px;
+      h1 {
+        width: 250px;
+        margin-top: 25px;
+        margin-right: auto;
+        margin-bottom: 90px;
+        padding-left: 30px;
+      }
+    }
+    &__subtext {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 100px;
+      margin-bottom: 25px;
+      padding-top: 0;
+      padding-right: 0;
+
+      font-size: 16px;
+      text-align: center;
+      span {
+        font-size: 20px;
+      }
+    }
+    &__advantages {
+      width: 100%;
+    }
+  }
+  .topoffer-advantages__item {
+    width: 100%;
+  }
+}

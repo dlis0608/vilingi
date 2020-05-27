@@ -1,0 +1,110 @@
+.faq {
+  margin-bottom: 30px;
+  padding-top: 30px;
+
+  background: url(../img/faq-bg.jpg) top center no-repeat;
+  &__wrap {
+    padding-left: 310px;
+  }
+  &__img {
+    display: none;
+  }
+  &__title {
+    margin-bottom: 25px;
+
+    font-size: 35px;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    color: #000000;
+  }
+}
+.faq-spoiler {
+  &__content {
+    display: none;
+    padding: 20px 20px 20px 100px;
+  }
+  &__bar {
+    position: relative;
+
+    margin-bottom: 10px;
+    padding: 20px 20px 20px 100px;
+
+    font-size: 18px;
+
+    background-color: #f4f1ef;
+    box-shadow: 3px 3px 0 #dad1cf;
+    transform: skewX(-20deg);
+    cursor: pointer;
+
+    transition-duration: 0.3s;
+    transition-property: background-color;
+    &:hover {
+      background-color: #e7ddd7;
+    }
+    span {
+      display: block;
+
+      transform: skewX(20deg);
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50px;
+
+      width: 34px;
+      height: 23px;
+
+      background: url(../img/spoiler-arrow.png);
+      transform: translateY(-50%) skewX(20deg);
+    }
+  }
+}
+.faq-spoiler__item.active .faq-spoiler__bar:before {
+  transform: translateY(-50%) skewX(20deg) rotate(180deg);
+}
+@media screen and (max-width: 1169px) {
+  .faq {
+    background: url(../img/faq-bg960.jpg) top center no-repeat;
+    &__wrap {
+      padding-left: 350px;
+    }
+    &__spoiler {
+      padding-right: 20px;
+    }
+  }
+}
+@media screen and (max-width: 969px) {
+  .faq-spoiler {
+    &__content {
+      padding: 20px 20px 20px 60px;
+    }
+    &__bar {
+      padding: 20px 20px 20px 60px;
+      &:before {
+        left: 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .faq {
+    padding-top: 0;
+
+    background: none;
+    &__wrap {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    &__img {
+      display: block;
+      max-width: 100%;
+      margin-right: auto;
+      margin-bottom: 0;
+      margin-left: auto;
+    }
+    &__spoiler {
+      padding-left: 20px;
+    }
+  }
+}

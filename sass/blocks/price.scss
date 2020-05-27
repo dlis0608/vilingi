@@ -1,0 +1,130 @@
+.price {
+  margin-bottom: 30px;
+  &__title {
+    margin-bottom: 25px;
+
+    font-size: 35px;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    color: #7b3929;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item {
+    position: relative;
+
+    width: 360px;
+    margin-bottom: 35px;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: -1;
+
+      width: 280px;
+      height: 310px;
+
+      background-color: #f9f7f6;
+      border-radius: 3px;
+      transform: translateX(-50%) skewX(-5deg);
+    }
+  }
+  &__item-title {
+    display: block;
+
+    font-weight: 700;
+    line-height: 45px;
+    text-align: center;
+    color: #000000;
+  }
+  &__item-value {
+    display: block;
+    margin-top: 7px;
+
+    text-align: center;
+    color: #7b3929;
+  }
+  &__p {
+    margin-bottom: 25px;
+
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+  }
+  &__download {
+    display: block;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+
+    background-color: #7b3929;
+    transform: skewX(-20deg);
+
+    transition-duration: 0.3s;
+    transition-property: background-color;
+    span {
+      display: block;
+
+      text-align: center;
+
+      transform: skewX(20deg);
+    }
+    &:hover {
+      background-color: #683023;
+    }
+  }
+}
+@media screen and (max-width: 1169px) {
+  .price {
+    &__item {
+      max-width: 32%;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      &:after {
+        width: calc(100% - 50px);
+        height: 100%;
+      }
+    }
+    &__item-value {
+      padding-bottom: 15px;
+    }
+  }
+}
+@media screen and (max-width: 969px) {
+  .price {
+    &__item {
+      max-width: 49%;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .price {
+    &__item {
+      width: 300px;
+      max-width: 100%;
+      margin-right: auto;
+      margin-bottom: 20px;
+      margin-left: auto;
+    }
+  }
+}
+@media screen and (max-width: 479px) {
+  .price {
+    &__download {
+      width: 260px;
+    }
+  }
+}
